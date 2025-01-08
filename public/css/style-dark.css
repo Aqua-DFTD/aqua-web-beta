@@ -1,0 +1,67 @@
+body {
+    background: #001d36;
+    color: white;
+}
+
+.navbar {
+    background: #001F3F;
+}
+
+.wave path {
+    fill: #001d36;
+}
+
+.card {
+    background: #001F3F;
+}
+
+.card h3 {
+    color: white;
+}
+
+.card p {
+    color: #c4c4c4;
+}
+
+footer {
+    background: #001F3F;
+}
+
+.contact-form{
+    background: #001F3F;
+}
+
+input {
+    background: #001d36;
+    color: white;
+    border: 1px solid #003B5C;
+
+}
+
+textarea {
+    background: #001d36;
+    color: white;
+    border: 1px solid #003B5C;
+
+}
+
+.send-form-button{
+    background-color: #003B5C;
+    color: white;
+}
+
+.send-form-button:hover{
+    background-color: #07181d;
+}
+
+label{
+    color: #fff;
+}
+
+.burgerNav {
+    background: #001F3F;
+}
+
+#darkModeToggleOne {
+    background: #001d36;
+ }

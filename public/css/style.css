@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    font-family: "Red Hat Display", Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.burgerNav {
+    background: #469280;
+}
+
+#darkModeToggleOne {
+    background: #3a7b66;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.navbar {
+    background-color: #469280;
+}
+
+.back-vid-container {
+    position: relative;
+    height: 0;
+    padding: 0 0 50% 0;
+    overflow: hidden;
+}
+
+.back-vid-container video {
+    position: absolute;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.back-vid-container .wave{
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    z-index: 1;
+}
+
+.titles {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 880
+}
+
+.titles .title-text-h1 {
+    text-align: center;
+    font-family: "Red Hat Display";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.titles .title-text-h2 {
+    color: #FFF;
+    text-align: center;
+    font-family: "Red Hat Display";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.title-text-h1, .title-text-h2 {
+    color: #ffffff;
+    text-shadow:
+            0 0 3px rgba(82, 82, 82, 0.45),
+            0 0 5px rgba(255, 255, 255, 0.44),
+            0 0 7px rgba(82, 82, 82, 0.38),
+            0 0 9px rgba(63, 63, 63, 0.43);
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #469280;
+    box-shadow: 0 0 15px 5px #00000081;
+}
+
+.copyright-container{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+.footer-links-container{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.github-link, .instagram-link{
+    margin: 0 10px;
+}
+
+.github-link img, .instagram-link img {
+    height: 30px;
+    width: auto;
+}
+
+/* Carrousel Container */
+.cards {
+    display: flex;
+    overflow-x: scroll; /* Défilement horizontal */
+    scroll-snap-type: x mandatory; /* Ancrage fluide */
+    gap: 20px;
+    padding: 20px;
+    margin: 40px auto;
+    max-width: 100%; /* S'étend à toute la largeur de l'écran */
+    scrollbar-width: none; /* Supprime la barre de défilement (Firefox) */
+}
+
+.cards::-webkit-scrollbar {
+    display: none; /* Supprime la barre de défilement (Chrome/Safari) */
+}
+
+/* Chaque carte */
+.card {
+    flex: 0 0 100%; /* Chaque carte occupe toute la largeur de l’écran par défaut */
+    max-width: 500px; /* Largeur maximale pour une bonne lisibilité sur les écrans larges */
+    height: 350px;
+    scroll-snap-align: center; /* Centre la carte lors du défilement */
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    margin: auto; /* Centrer la carte dans l'écran */
+}
+
+/* Titres et Texte */
+.question-card {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #003B5C;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #001F3F;
+    margin: 0;
+}
+
+/* Container principal du carrousel */
+.carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    max-width: 100%; /* S'adapte à la largeur de l'écran */
+    padding: 20px;
+}
+
+/* Navigation boutons */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 59, 92, 0.8);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Boutons responsives */
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: #003B5C;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .card {
+        flex: 0 0 90%; /* Les cartes occupent 90% de l'écran sur les petits écrans */
+    }
+
+    .prev-btn, .next-btn {
+        display: none;
+    }
+
+    .back-vid-container .wave {
+        display: none;
+    }
+
+    .back-vid-container {
+        height: 80vh;
+    }
+
+    .logo-container svg {
+        height: 60px;
+        width: 60px
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 0 0 100%; /* Les cartes occupent 100% de l'écran sur les très petits écrans */
+    }
+
+    .prev-btn, .next-btn {
+        width: 25px;
+        height: 25px;
+        font-size: 18px;
+    }
+
+    .question-card {
+        font-size: 16px; /* Réduit la taille du titre */
+    }
+
+    .card p {
+        font-size: 12px; /* Réduit la taille du texte */
+    }
+}
+
+.videoEau {
+    margin-left: 40px;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aqua - Contact</title>
+    <link rel="icon" href="/img/logo/droplet.svg">
+    <meta name="description" content="Contactez Aqua, votre partenaire pour une hydratation optimale. Nous répondons à toutes vos questions !"/>
+    <link rel="incon" type="image/x-icon" href="/img/logo/droplet.svg">
+    <link rel="stylesheet" href="/css/contact.css">
+    <link id="darkModeStylesheet" rel="stylesheet" href="/css/style-light.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <script src="/js/colorMode.js" defer></script>
+    <script src="/js/burgerMenu.js" defer></script>
+</head>
+<body>
+<header class="navbar" id="dark-navbar">
+    <div class="logo-container">
+        <a href="#"><img src="/img/logo/droplet.svg" alt="Logo"></a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+    <button id="darkModeToggleOne">Light</button>
+    <img id="menuBurger" src="icons/burger.png">
+</header>
+<div class="burgerNav">
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+<div class="back-img-container">
+    <img src="/img/contact-bg.jpg" alt="underwater-background">
+    <div class="form-container">
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="mailto:jules.ribbe@etu.univ-amu.fr" method="post">
+                <label for="object">Object:</label>
+                <input type="text" id="object" name="object" required>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button class="send-form-button" type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="copyright-container">
+        <p>© 2024 - 2025</p>
+    </div>
+    <div class="footer-links-container">
+        <div class="github-link">
+            <a href="https://github.com/Aqua-DFTD/aqua-web-beta" target="_blank"><img src="/icons/github-light.png" alt="github-logo">️</a>
+        </div>
+        <div class="instagram-link">
+            <a href="https://www.instagram.com/jules.rbe/" target="_blank"><img src="/icons/instagram-light.png" alt="instagram-logo">️</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

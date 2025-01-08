@@ -1,0 +1,102 @@
+.navbar {
+    height: 150px;
+    box-shadow: 0 0 15px 5px #00000081;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+
+#menuBurger {
+    display: none;
+}
+
+.navbar nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style:none;
+}
+
+.navbar nav ul li {
+    margin: 0 13px;
+    font-size: 22px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+}
+.navbar nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.navbar nav ul li a:hover::after {
+    width: 100%;
+}
+
+.logo-container svg {
+    height: 80px;
+    width: 80px;
+}
+
+@media (max-width: 768px) {
+
+    html {
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        height: 100px;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    #menuBurger {
+        display: block;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    }
+
+    .burgerNav {
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 260px;
+        z-index: 999;
+        display: none;
+    }
+
+    .burgerNav.show {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .burgerNav nav ul li {
+        list-style-type: none;
+    }
+
+    .burgerNav nav ul li a {
+        text-decoration: none;
+        color: white;
+    }
+}
